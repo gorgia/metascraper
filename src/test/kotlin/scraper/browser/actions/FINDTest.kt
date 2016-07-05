@@ -46,6 +46,7 @@ class FINDTest {
         var result  = browserInvoker.process(action, browserInvoker.resultMap, browserInvoker.webDriver)
         assertNotNull(result["pagelet_welcome_box"])
         log().info(result.toJson().toString())
+
     }
 
     @Test
