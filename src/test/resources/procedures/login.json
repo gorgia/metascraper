@@ -1,0 +1,48 @@
+{
+  "actions": [
+    {
+      ".GET": {
+        "from": "https://www.facebook.com/",
+        "type": "web",
+        "to": "document"
+      }
+    },
+    {
+      ".FIND": {
+        "from": "document",
+        "selector": "#email",
+        "elementType": "web",
+        "to": "mailbox"
+      }
+    },
+    {
+      ".FIND": {
+        "from": "document",
+        "selector": "#pass",
+        "elementType": "web",
+        "to": "passbox"
+      }
+    },
+    {
+      ".TEXT": {
+        "from": "mailbox",
+        "to": "mailbox",
+        "text": "gracewardon666@outlook.com"
+      }
+    },
+    {
+      ".TEXT": {
+        "from": "passbox",
+        "to": "passbox",
+        "text": "ciucciaqui666"
+      }
+    },
+    {
+      ".TEXT": {
+        "from": "passbox",
+        "to": "passbox",
+        "text": "\uE006"
+      }
+    }
+  ]
+}

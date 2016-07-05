@@ -1,0 +1,19 @@
+{
+  "@type": "FOREACH",
+  "beforeActions": [
+    {
+      "@type": "FIND",
+      "beforeActions": [
+        {
+          "@type": "GET",
+          "params": {
+            "url": "https://twitter.com/switch_d"
+          }
+        }
+      ],
+      "params": {
+        "csspath": ".tweet"
+      }
+    }
+  ]
+}

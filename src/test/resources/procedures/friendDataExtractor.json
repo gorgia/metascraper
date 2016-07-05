@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      ".FIND": {
+        "from": "friendselementlist",
+        "to": "friend.hovercard",
+        "selector": ".uiProfileBlockContent [data-hovercard^=/ajax/hovercard]",
+        "attribute": "data-hovercard"
+      }
+    },
+    {
+      ".FIND": {
+        "from": "friendselementlist",
+        "to": "friend.name",
+        "selector": ".uiProfileBlockContent [data-hovercard^=/ajax/hovercard]",
+        "attribute": "text"
+      }
+    }
+  ]
+}

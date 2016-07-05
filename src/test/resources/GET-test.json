@@ -1,0 +1,10 @@
+{
+  "actions": [
+    {
+      ".GET": {
+        "from": "http://google.com",
+        "to": "document"
+      }
+    }
+  ]
+}

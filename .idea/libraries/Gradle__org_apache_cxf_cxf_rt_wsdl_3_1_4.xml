@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-wsdl:3.1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-wsdl/3.1.4/864e5001262447c4188a2d072f96d281029de621/cxf-rt-wsdl-3.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-wsdl/3.1.4/393b969252000a1865aa4b4724bdcd2da24a12b2/cxf-rt-wsdl-3.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

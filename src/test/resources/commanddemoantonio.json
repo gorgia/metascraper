@@ -1,0 +1,79 @@
+{
+	"#like" : {
+		"@find" : {
+			"from" : "document",
+			"xpath" : "//like",
+			"to" : "tweets.author.like"
+		}
+	},
+	"#twitter" : {
+		"@get" : {
+			"from" : "url",
+			"to" : "document"
+		},
+		"@scroll" : {
+			"from" : "document",
+			"to": "document"
+		},
+		"@find" : [
+			{
+				"from" : "document",
+				"xpath" : "//title",
+				"to" : "title"
+			},{
+				"from" : "document",
+				"xpath" : "//publishdate",
+				"to" : "publish-date"
+			}, {
+				"from" : "document",
+				"xpath" : "//tweets",
+				"to" : "tweets.$entity"
+			}
+		],
+		"@find" : [
+			{
+				"from" : "tweets",
+				"xpath" : "//author"
+				"to" : "tweets.author"
+			},
+			{
+				"from" : "tweets",
+				"xpath" : "//content"
+				"to" : "tweets.content"
+			},
+			{
+				"from" : "tweets",
+				"xpath" : "//imageurl"
+				"to" : "tweets.image"
+			}
+		],
+		"@click"{
+			"from" : "tweets.author",
+			"to" : "#like"
+		}
+		"@find"{
+			"from" : "document",
+			"xpath" : "//like-peoples",
+			"to": "like-peoples"
+		}
+		"@download" : [
+			 "from": "tweets.image"
+			 "to": "tweets.image"
+		],
+		"@hdfs" : {
+			 "from": "tweets.image"
+			 "to" : "tweets.image"
+		},
+		"@if" : {
+			"from" : "tweets.author",
+			"filter" : "contains("pippo")",
+			"to": "tweets.author"
+		}
+
+	}
+]
+
+{"url" : "http://..."}
+	=> @get => {"url" : "http://..", document : webentity}
+	=> @find => {"url" : "http://..", document : webentity, title: "title", "publish-date": "jul 23, 16", tweets: [{$entity:webentity}, {....}]}
+	=> @each => {"url" : "http://..", document : webentity, title: "title", "publish-date": "jul 23, 16", tweets : [{$entity:webentity},{author :"pippo", "content" : "hello world", "image" : "http://image"}, {.......}]

@@ -1,0 +1,16 @@
+{
+  "actions": [
+    {
+      ".GET": {
+        "from": "url",
+        "to": "document"
+      }
+    },
+    {
+      ".GET": {
+        "from": "url",
+        "to": "document"
+      }
+    }
+  ]
+}

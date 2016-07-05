@@ -1,0 +1,34 @@
+{
+  "actions": [
+    {
+      ".PROCEDURE": {
+        "file": "src/test/resources/procedures/login.json"
+      }
+    },
+    {
+      ".GET": {
+        "from": "https://www.facebook.com/profile.php?id=100011401615764&sk=friends"
+      }
+    },
+    {
+      ".SCROLL": {
+        "to": "document",
+        "heartbit": 3
+      }
+    },
+    {
+      ".FIND": {
+        "from": "document",
+        "to": "friendselementlist",
+        "selector": "._698"
+      }
+    },
+    {
+      ".PROCEDURE": {
+        "from": "friendselementlist",
+        "to": "hovercardfriendlist",
+        "file": "src/test/resources/procedures/friendDataExtractor.json"
+      }
+    }
+  ]
+}

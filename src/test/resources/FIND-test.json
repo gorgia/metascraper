@@ -1,0 +1,17 @@
+{
+  "actions": [
+    {
+      ".GET": {
+        "from": "http://whatismyipaddress.com/",
+        "to": "document"
+      }
+    },
+    {
+      ".FIND":{
+        "from":"document",
+        "selector":"section_left",
+        "to": "ipaddress"
+      }
+    }
+  ]
+}
