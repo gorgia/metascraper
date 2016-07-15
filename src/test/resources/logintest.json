@@ -45,17 +45,22 @@
       }
     },
     {
-      ".FIND":{
-        "from" : null,
-        "destElType" : "jsoup",
-        "selector" : "#pagelet_welcome_box",
-        "to": "pagelet_welcome_box"
+      ".WAIT": {
+        "seconds": 3
       }
     },
     {
       ".SCREENSHOT":{
         "to": "screenshot/facebooktestlogin",
         "outputType": "file"
+      }
+    },
+    {
+      ".FIND":{
+        "from" : null,
+        "destElType" : "jsoup",
+        "selector" : "#pagelet_welcome_box",
+        "to": "pagelet_welcome_box"
       }
     }
   ]

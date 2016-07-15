@@ -4,7 +4,7 @@ package scraper.browser.actions
 import com.google.common.collect.Multimap
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
-import socialnet.browser.back.messages.actions.context.insert
+import scraper.context.insert
 
 /**
  * Created by andrea on 28/04/16.
@@ -15,9 +15,11 @@ open class GET() : BrowserAction() {
     override var from: String? = ""
     override var to: String? = "document"
     var type: String = "web" // or css
+    var wait: String = ""
 
     constructor(webDriver: WebDriver) : this() {
         this.webDriver = webDriver
+
     }
 
 

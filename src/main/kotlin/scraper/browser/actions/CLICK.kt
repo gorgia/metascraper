@@ -2,8 +2,8 @@ package scraper.browser.actions
 
 import com.google.common.collect.Multimap
 import org.openqa.selenium.WebElement
-import socialnet.browser.back.messages.actions.context.find
-import socialnet.browser.back.messages.actions.context.insert
+import scraper.context.find
+import scraper.context.insert
 import socialnet.browser.back.messages.actions.exceptions.MissingParamException
 
 /**

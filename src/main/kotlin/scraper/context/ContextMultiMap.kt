@@ -1,4 +1,4 @@
-package socialnet.browser.back.messages.actions.context
+package scraper.context
 
 
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -11,15 +11,13 @@ import com.jayway.jsonpath.Configuration
 import com.jayway.jsonpath.JsonPath
 import com.jayway.jsonpath.Predicate
 import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider
+import org.json.JSONObject
 import org.jsoup.nodes.Element
 import org.openqa.selenium.WebElement
-import org.slf4j.LoggerFactory
 import scraper.jackson.ElementSerializer
 import scraper.jackson.WebElementSerializer
 import java.util.*
 
-
-private val log = LoggerFactory.getLogger(Map::class.java)
 
 fun Any.toJson(): String {
     val mapper = ObjectMapper()
@@ -38,7 +36,7 @@ fun Multimap<String, *>.find(stringIndex: String): Any? {
     if (indexOfDot < 0) {
         val list = this.get(stringIndex)
         if (list.isEmpty()) return null
-        if (list.size == 1) return list.first()
+        if (list.size == 1) return list.first() //not sure if i want this line
         else return list
     }
     var firstSplit = stringIndex.substring(0, indexOfDot)
@@ -52,14 +50,14 @@ fun Multimap<String, *>.find(stringIndex: String): Any? {
             resultList.add(el.find(secondSplit))
         }
         return resultList
-    }
-    return (match as Multimap<String, *>).find(secondSplit)
+    } else if (match != null && match is Multimap<*, *>)
+        return (match as Multimap<String, *>).find(secondSplit)
     return null
 }
 
 
 fun Multimap<String, Any?>.insert(stringIndex: String, value: Any?) {
-    var indexOfDot = stringIndex.indexOf(".")
+    val indexOfDot = stringIndex.indexOf(".")
     //case A: no dot found in key
     if (indexOfDot < 0) {
         if (stringIndex.toLowerCase().contains("list"))
@@ -76,23 +74,26 @@ fun Multimap<String, Any?>.insert(stringIndex: String, value: Any?) {
     var secondSplit: String = stringIndex.substring(indexOfDot + 1)
     var match = this.find(firstSplit)
     //case B.1 match not found in first split ==> create map at first split
-    if (match == null || match !is LinkedListMultimap<*, *>) {
-        this.put(firstSplit, LinkedListMultimap.create<String, Comparable<Any?>>())
-        match = this.find(firstSplit)
+    if (match == null) {
+        this.put(firstSplit, LinkedListMultimap.create<String, Any?>())
+        match = this.find(firstSplit)!!
     }
-    //case
-    (match as Multimap<String, Any?>).insert(secondSplit, value)
+    if (match is Multimap<*, *>) {
+        (match as LinkedListMultimap<String, Any?>).insert(secondSplit, value)
+    }
+    else throw Exception("impossible to insert. Found a non-Collection element in multimap at index $match")
 }
+
 
 val Multimap<String, Any?>.children: Any?
     get() = children
 
 
-fun <T> org.json.JSONObject.find(path: String, vararg filters: Predicate): T {
+fun <T> JSONObject.find(path: String, vararg filters: Predicate): T {
     return JsonPath.read<T>(this.toString(), "$.$path")
 }
 
-fun org.json.JSONObject.insert(path: String, value: Any?, vararg filters: Predicate) {
+fun JSONObject.insert(path: String, value: Any?, vararg filters: Predicate) {
     val lastDot: Int = path.lastIndexOf(".")
     var key: String
     var effectivePath: String?

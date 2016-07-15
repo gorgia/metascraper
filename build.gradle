@@ -3,12 +3,12 @@ version '0.1-SNAPSHOT'
 
 buildscript {
     ext {
-        kotlinVersion = '1.0.2'
+        kotlinVersion = '1.0.3'
         springBootVersion = '1.4.0.BUILD-SNAPSHOT'
-        springVersion = '4.2.6.RELEASE'
+        springVersion = '4.3.1.RELEASE'
         camelVersion = '2.16.2'
         activemqVersion = '5.13.2'
-        seleniumVersion = '2.53.0'
+        seleniumVersion = '2.53.1'
     }
     repositories {
         mavenCentral()
@@ -16,8 +16,9 @@ buildscript {
         maven { url "https://repo.spring.io/libs-milestone" }
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.BUILD-SNAPSHOT")
+
     }
 }
 
@@ -26,22 +27,6 @@ apply plugin: 'kotlin'
 apply plugin: 'spring-boot'
 
 sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-group 'keyron'
-version '0.1-SNAPSHOT'
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.2"
-    }
-}
 
 repositories {
     mavenCentral()
@@ -56,14 +41,12 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
     compile "org.springframework.boot:spring-boot:$springBootVersion"
-    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
-    compile "org.springframework.boot:spring-boot-autoconfigure:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
     compile "org.springframework.boot:spring-boot-configuration-processor:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-aop:$springBootVersion"
 
-    compile "org.springframework', name: 'spring-jdbc', version: $springVersion"
+    compile "org.springframework:spring-jdbc:$springVersion"
 
     compile "org.apache.camel:camel-spring-boot:$camelVersion"
     compile "org.apache.camel:camel-core:$camelVersion"
@@ -85,6 +68,7 @@ dependencies {
     compile "com.google.guava:guava:19.0"
     compile "com.jayway.jsonpath:json-path:2.2.0"
     compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-guava', version: '2.7.4'
+    compile 'com.machinepublishers:jbrowserdriver:0.14.9'
 
 
 

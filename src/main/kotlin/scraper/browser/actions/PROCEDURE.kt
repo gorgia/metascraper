@@ -3,9 +3,9 @@ package scraper.browser.actions
 import com.google.common.collect.LinkedListMultimap
 import com.google.common.collect.Multimap
 import scraper.browser.ActionProcessor
+import scraper.context.find
+import scraper.context.insert
 import scraper.utils.readFile
-import socialnet.browser.back.messages.actions.context.find
-import socialnet.browser.back.messages.actions.context.insert
 import socialnet.browser.back.messages.actions.exceptions.MissingParamException
 
 /**
@@ -27,15 +27,19 @@ class PROCEDURE : BrowserAction(), ActionProcessor {
         if (file.isNullOrEmpty()) {
             throw MissingParamException("PROCEDURE must contain a file path")
         }
+
         val message = readFile(file)
         val actionList = actionFactory.createActionList(message)
         if (actionList.isEmpty()) {
             throw MissingParamException("PROCEDURE must contain some actions")
         }
-        var fromObj: Any? = null
-        if (from != null && from!!.isNotEmpty()) {
-            fromObj = resultMap.find(from!!)
+        if (from.isNullOrEmpty()) {
+            from = actionList.first.from
+            if (from.isNullOrEmpty()) throw MissingParamException("PROCEDURE must start from somewhere: missing \"from\" parameter")
         }
+        correctFrom(actionList)
+        var fromObj: Any? = resultMap.find(from!!)
+
         if (fromObj is Collection<*>) {
             fromObj.forEach { fromO ->
                 var singleResultMap: Multimap<String, Any?> = LinkedListMultimap.create<String, Any?>() //create a temporary data structure
@@ -45,7 +49,6 @@ class PROCEDURE : BrowserAction(), ActionProcessor {
                     singleResultMap.removeAll(from) //remove elaboration data, keeping results
                 }
                 resultMap.insert(to!!, singleResultMap)
-
             }
         } else {
             process(actionList, resultMap, this.webDriver)
@@ -53,5 +56,10 @@ class PROCEDURE : BrowserAction(), ActionProcessor {
         return resultMap
     }
 
+
+    private fun correctFrom(procedureActionList: List<Action>) {
+        var firstFrom = procedureActionList.first().from
+        procedureActionList.forEach { action -> if (action.from.equals(firstFrom)) action.from = this.from }
+    }
 
 }

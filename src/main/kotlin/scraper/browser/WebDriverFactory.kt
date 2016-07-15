@@ -1,6 +1,10 @@
 package scraper.browser
 
 
+import com.machinepublishers.jbrowserdriver.JBrowserDriver
+import com.machinepublishers.jbrowserdriver.Settings
+import com.machinepublishers.jbrowserdriver.Timezone
+import org.openqa.selenium.Platform
 import org.openqa.selenium.Proxy
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -45,6 +49,7 @@ class WebDriverFactory {
             "remote-firefox" -> capabilities = initRemoteFirefox()
             "remote-chrome" -> capabilities = initRemoteChrome()
             "remote-phantom" -> capabilities = initRemotePhantomJS()
+            "jbrowser" -> capabilities = initJBrowserDriver()
         }
 
         if (proxy != null) setProxy(capabilities)
@@ -57,6 +62,7 @@ class WebDriverFactory {
             "remote-firefox" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
             "remote-chrome" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
             "remote-phantom" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
+            "jbrowser" -> webDriver = JBrowserDriver(Settings.builder().timezone(Timezone.EUROPE_AMSTERDAM).build())
             else -> {
                 webDriver = HtmlUnitDriver()
             }
@@ -78,7 +84,12 @@ class WebDriverFactory {
         capabilities.setCapability(CapabilityType.PROXY, proxy)
     }
 
-    private fun initFirefoxBrowser(proxy: String? = null): DesiredCapabilities {
+    private fun initJBrowserDriver() : DesiredCapabilities{
+        val capabilities = DesiredCapabilities("jbrowserdriver", "1", Platform.ANY)
+        return capabilities
+    }
+
+    private fun initFirefoxBrowser(): DesiredCapabilities {
         log().info("Init Firefox WebBrowser")
         val customProfile = FirefoxProfile()
         customProfile.setAcceptUntrustedCertificates(true)

@@ -2,13 +2,13 @@ package scraper.browser.actions
 
 import com.google.common.collect.Multimap
 import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import org.openqa.selenium.By
 import org.openqa.selenium.SearchContext
 import org.openqa.selenium.WebElement
+import scraper.context.find
+import scraper.context.insert
 import scraper.utils.log
-import socialnet.browser.back.messages.actions.context.find
-import socialnet.browser.back.messages.actions.context.insert
 import socialnet.browser.back.messages.actions.exceptions.MissingParamException
 import java.util.*
 
@@ -24,10 +24,11 @@ open class FIND : BrowserAction() {
     var selector: String = ""
     var attribute: String? = null
     var collapseList = true
+    var wait: Long = 3
 
 
     override fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?> {
-        var resultList: MutableList<*> = ArrayList<Any?>()
+        var resultList: List<*> = ArrayList<Any?>()
         try {
             var fromObj: Any?
             if (selector.isNullOrEmpty()) {
@@ -48,13 +49,13 @@ open class FIND : BrowserAction() {
             } else {
                 resultList = process(fromObj)
             }
-            if (resultList.size > 0) {
-                if (resultList.size == 1 && collapseList) {
-                    resultMap.insert(to!!, resultList.first())
-                } else {
-                    resultMap.insert(to!!, resultList)
-                }
+
+            if (resultList.size == 1 && collapseList) {
+                resultMap.insert(to!!, resultList.first())
+            } else {
+                resultMap.insert(to!!, resultList)
             }
+
         } catch(e: Exception) {
             log().error("Error during FIND action", e)
         }
@@ -62,61 +63,66 @@ open class FIND : BrowserAction() {
         return resultMap
     }
 
-    private fun process(fromObj: Any?): MutableList<*> {
-        var resultList: MutableList<*> = ArrayList<Any?>()
+    private fun process(fromObj: Any?): List<*> {
+        var resultList: List<*> = ArrayList<Any?>()
         when (fromObj) {
             is SearchContext -> {
                 resultList = getFromSearchContext(fromObj, selector, destElType)
             }
             is Element -> {
-                var intermediateResultList = fromObj.select(selector)
-                var resultList2 = resultList as MutableList<String>
-                if (attribute != null) {
-                    intermediateResultList.forEach({ ir ->
-                        if ("text".equals(attribute)) {
-                            resultList2.add(ir.text())
-                        } else {
-                            resultList2.add(ir.attr(attribute))
-                        }
-                    })
-                }
-                resultList = resultList2
+                resultList = getFromJsoupElement(fromObj,selector)
             }
             is String -> {
-                resultList = Jsoup.parse(fromObj).select(selector)
-            }
-            is WebElement -> {
-                resultList = webDriver!!.findElements(getSeleniumSelector(this.selectorType, this.selector))
+                var jsoupElement = Jsoup.parse(fromObj)
+                resultList  = getFromJsoupElement(jsoupElement,selector)
             }
         }
         return resultList
     }
 
-    private fun getFromSearchContext(searchContext: SearchContext, selector: String, destElementType: String = destElType): MutableList<*> {
-        var list: MutableList<*> = ArrayList<Any?>()
-        if ("web".equals(destElementType)) {
-            when (selectorType) {
-                "css" -> list = searchContext.findElements(By.cssSelector(selector))
-                "xpath" -> list = searchContext.findElements(By.xpath(selector))
-            }
-        } else if ("jsoup".equals(destElementType)) {
-            list = ArrayList<Element>()
-            when (selectorType) {
-                "css" -> searchContext.findElements(By.cssSelector(selector)).forEach { we ->
-                    (list as ArrayList<Element>).add(Jsoup.parse(we.getAttribute("innerHTML")))
-                }
-                "xpath" -> searchContext.findElements(By.xpath(selector)).forEach { we ->
-                    (list as ArrayList<Element>).add(Jsoup.parse(we.getAttribute("innerHTML")))
-                }
+    private fun getFromSearchContext(searchContext: SearchContext, selector: String, destElementType: String = destElType): List<*> {
+        var resultList: List<*> = ArrayList<Any?>()
+        var webElementsList: List<WebElement> = searchContext.findElements(getSeleniumSelector(selectorType, selector))
+        if (!attribute.isNullOrBlank()) {
+            var attributes: MutableList<String?> = ArrayList()
+            webElementsList.forEach { we -> attributes.add(we.attribute(this.attribute!!)) }
+            resultList = attributes
+        } else {
+            if ("web".equals(destElementType)) {
+                return webElementsList
+            } else if ("jsoup".equals(destElementType)) {
+                var documentsList: MutableList<Document> = ArrayList()
+                webElementsList.forEach { we -> documentsList.add(Jsoup.parse(we.getAttribute("innerHTML"))) }
+                resultList = documentsList
             }
         }
-        return list
+        return resultList
     }
-}
 
-fun Element.attr(attributeKey: String): String {
-    if ("text".equals(attributeKey)) {
-        return this.text()
+    private fun getFromJsoupElement(element: Element, selector: String): List<*> {
+        var attributes = ArrayList<String?>()
+        var elements = element.select(selector)
+        if (attribute.isNullOrBlank()) return elements
+        elements.forEach({ ir ->
+            attributes.add(ir.attribute(attribute!!))
+        })
+        return attributes
     }
-    return this.attr(attributeKey)
+
+
+
+    fun Element.attribute(attributeKey: String): String? {
+        if (attributeKey.isNullOrBlank()) return null
+        if ("text".equals(attributeKey)) {
+            return this.text()
+        }
+        return this.attr(attributeKey)
+    }
+
+    fun WebElement.attribute(attribute: String): String? {
+        if ("text".equals(attribute)) {
+            return this.text
+        }
+        return this.getAttribute(attribute)
+    }
 }

@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.springframework.boot:spring-boot-configuration-processor:1.4.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/1.4.0.BUILD-SNAPSHOT/84871c34a4414abdb8af41a997ad3d6972afae94/spring-boot-configuration-processor-1.4.0.BUILD-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/1.4.0.BUILD-SNAPSHOT/8789319b2c35aedcccc39769bf307dbc235be837/spring-boot-configuration-processor-1.4.0.BUILD-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/1.4.0.BUILD-SNAPSHOT/463f15946129225436085f3f86d42564ae87841d/spring-boot-configuration-processor-1.4.0.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/1.4.0.BUILD-SNAPSHOT/717e8ad9f3555d8635ff06d0b6d355f89ffac1f9/spring-boot-configuration-processor-1.4.0.BUILD-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

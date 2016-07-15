@@ -43,6 +43,19 @@
         "to": "passbox",
         "text": "\uE006"
       }
+    },
+    {
+      ".WAIT": {
+        "seconds": 3
+      }
+    },
+    {
+      ".FIND": {
+        "from": null,
+        "destElType": "jsoup",
+        "selector": "#pagelet_welcome_box",
+        "to": "pagelet_welcome_box"
+      }
     }
   ]
 }

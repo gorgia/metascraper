@@ -9,7 +9,8 @@
     {
       ".GET": {
         "from": "url",
-        "to": "document"
+        "to": "document",
+        "destElType": "jsoup"
       }
     }
   ]

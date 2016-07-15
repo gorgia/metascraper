@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      ".GET": {
+        "from": "http://www.whatismyip.com",
+        "type": "web",
+        "to": "document"
+      }
+    },
+    {
+      ".FIND": {
+        "from": "document",
+        "selector": "#ip-box",
+        "destElType": "jsoup",
+        "to": "ip",
+        "attribute": "text"
+      }
+    }
+  ]
+}

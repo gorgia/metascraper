@@ -4,6 +4,7 @@ import com.google.common.collect.Multimap
 import org.openqa.selenium.WebDriver
 import scraper.browser.actions.Action
 import scraper.browser.actions.BrowserAction
+import scraper.utils.log
 
 /**
  * Created by andrea on 30/06/16.
@@ -18,7 +19,7 @@ interface ActionProcessor {
             try {
                 action.execute(resultMap)
             } catch(e: Exception) {
-                BrowserInvoker.log.error("Exception during execution of action: ${action.toString()}", e)
+                log().error("Exception during execution of action: ${action.toString()}", e)
             }
         }
         return resultMap

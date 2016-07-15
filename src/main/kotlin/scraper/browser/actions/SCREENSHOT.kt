@@ -4,8 +4,8 @@ import com.google.common.collect.Multimap
 import org.apache.commons.io.FileUtils
 import org.openqa.selenium.OutputType
 import org.openqa.selenium.TakesScreenshot
+import scraper.context.insert
 import scraper.utils.log
-import socialnet.browser.back.messages.actions.context.insert
 import java.io.File
 
 /**

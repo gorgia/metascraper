@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.springframework.boot:spring-boot-actuator:1.4.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.0.BUILD-SNAPSHOT/823830ff52fe18aa7f2ad5c8a5950e100b4ef6b9/spring-boot-actuator-1.4.0.BUILD-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.0.BUILD-SNAPSHOT/5d6ee802b8b8a75188cd1a69c17ea7bfa5f33ed8/spring-boot-actuator-1.4.0.BUILD-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.0.BUILD-SNAPSHOT/60dfd5e0718724894bee9e32cd68b57f650e77b2/spring-boot-actuator-1.4.0.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.0.BUILD-SNAPSHOT/85bc9a914af025e6174a1cebcba1a4cf1d9ec2bf/spring-boot-actuator-1.4.0.BUILD-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

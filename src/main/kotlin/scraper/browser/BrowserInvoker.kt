@@ -7,7 +7,6 @@ import com.google.common.collect.LinkedListMultimap
 import com.google.common.collect.Multimap
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
-import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Lazy
 import org.springframework.context.annotation.Scope
@@ -23,10 +22,6 @@ import scraper.jackson.WebElementSerializer
 @Scope("prototype")
 @Lazy
 open class BrowserInvoker : ActionProcessor {
-    companion object {
-        val log = LoggerFactory.getLogger(BrowserInvoker::class.java)
-    }
-
 
     val mapper = ObjectMapper();
 

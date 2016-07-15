@@ -2,7 +2,7 @@ package scraper.browser.actions
 
 import com.google.common.collect.Multimap
 import scraper.browser.browserinternals.decorators.infiniteScroll
-import socialnet.browser.back.messages.actions.context.insert
+import scraper.context.insert
 
 /**
  * Created by andrea on 28/04/16.

@@ -5,7 +5,7 @@ import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
-import scraper.Application
+import scraper.ApplicationScraper
 import scraper.browser.BrowserInvoker
 import scraper.utils.log
 import scraper.utils.readFile
@@ -14,7 +14,7 @@ import scraper.utils.readFile
  * Created by andrea on 07/06/16.
  */
 @RunWith(SpringJUnit4ClassRunner::class)
-@SpringBootTest(classes = arrayOf(Application::class))
+@SpringBootTest(classes = arrayOf(ApplicationScraper::class))
 class GETTest {
 
     val testStringPath = "src/test/resources/GET-test.json"
