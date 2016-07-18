@@ -11,7 +11,7 @@ import scraper.utils.log
  */
 interface ActionProcessor {
 
-    open fun process(actions: List<Action>, resultMap: Multimap<String, Any?>, webDriver: WebDriver): Multimap<String, Any?> {
+    fun process(actions: List<Action>, resultMap: Multimap<String, Any?>, webDriver: WebDriver): Multimap<String, Any?> {
         actions.forEach { action ->
             if (action is BrowserAction) {
                 action.webDriver = webDriver

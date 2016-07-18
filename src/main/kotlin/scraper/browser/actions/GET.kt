@@ -13,7 +13,7 @@ import scraper.context.insert
 open class GET() : BrowserAction() {
 
     override var from: String? = ""
-    override var to: String? = "document"
+    override var to: String? = null
     var type: String = "web" // or css
     var wait: String = ""
 

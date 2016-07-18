@@ -5,6 +5,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.openqa.selenium.WebDriver
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
@@ -12,6 +13,7 @@ import scraper.ApplicationScraper
 import scraper.browser.BrowserInvoker
 import scraper.context.find
 import scraper.context.toJson
+import scraper.utils.ApplicationContextProvider
 import scraper.utils.log
 import scraper.utils.readFile
 import java.util.regex.Pattern
@@ -46,7 +48,8 @@ class FINDTest {
     fun executeLogin() {
         testStringPath = "src/test/resources/logintest.json"
         val action = actionFactory.createActionList(readFile(testStringPath))
-        var result = browserInvoker.process(action, browserInvoker.resultMap, browserInvoker.webDriver)
+        val webDriver = ApplicationContextProvider.context.getBean(WebDriver::class.java)
+        var result = browserInvoker.process(action, browserInvoker.resultMap, webDriver)
         var pagelet = result.find("pagelet_welcome_box")
         assertTrue(pagelet != null)
         log().info(result.toJson().toString())
