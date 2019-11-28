@@ -16,5 +16,6 @@ import org.springframework.stereotype.Component
 interface Action  {
     var from : String?
     var to : String?
-    open fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?>
+    fun execute()
+    fun produce(destType: DestType): Any?
 }

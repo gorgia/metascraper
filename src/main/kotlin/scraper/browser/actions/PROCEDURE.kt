@@ -17,14 +17,14 @@ class PROCEDURE : BrowserAction(), ActionProcessor {
 
     override var to: String? = "procedureResultList"
 
-    val actionFactory = ActionFactory()
+    private val actionFactory = ActionFactory()
 
     var file: String = ""
 
     var removeFrom = true
 
-    override fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?> {
-        if (file.isNullOrEmpty()) {
+    override fun execute(){
+        if (file.isEmpty()) {
             throw MissingParamException("PROCEDURE must contain a file path")
         }
 
@@ -38,7 +38,7 @@ class PROCEDURE : BrowserAction(), ActionProcessor {
             if (from.isNullOrEmpty()) throw MissingParamException("PROCEDURE must start from somewhere: missing \"from\" parameter")
         }
         correctFrom(actionList)
-        var fromObj: Any? = resultMap.find(from!!)
+        val fromObj: Any? = resultMap.find(from!!)
 
         if (fromObj is Collection<*>) {
             fromObj.forEach { fromO ->
@@ -53,12 +53,11 @@ class PROCEDURE : BrowserAction(), ActionProcessor {
         } else {
             process(actionList, resultMap, this.webDriver)
         }
-        return resultMap
     }
 
 
     private fun correctFrom(procedureActionList: List<Action>) {
-        var firstFrom = procedureActionList.first().from
+        val firstFrom = procedureActionList.first().from
         procedureActionList.forEach { action -> if (action.from.equals(firstFrom)) action.from = this.from }
     }
 

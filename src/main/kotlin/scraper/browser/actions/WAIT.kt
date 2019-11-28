@@ -12,7 +12,7 @@ class WAIT : BrowserAction() {
     override var from: String? = ""
 
     override var to: String? = ""
-    var selectorType: String = "css" //OR xpath
+    var selectorType: SelectorType = SelectorType.CSS
     var selector: String? = ""
 
     var seconds: Long = 1

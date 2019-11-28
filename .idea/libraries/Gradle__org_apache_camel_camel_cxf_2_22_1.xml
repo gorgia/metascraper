@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.camel:camel-cxf:2.22.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-cxf/2.22.1/abce459c87a9973f7a55d5e41001fb93ff1192e8/camel-cxf-2.22.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-cxf/2.22.1/963cc711b1417c8bf28eb2d452f2f517b488156c/camel-cxf-2.22.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

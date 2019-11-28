@@ -40,7 +40,7 @@ class WebDriverFactory {
     fun create(browserType: String = this.browserType, pageLoadingTimeSeconds: Long = this.pageLoadingTimeSeconds, proxy: String? = null): WebDriver {
         log().debug("Create webDriver with params: browserType $browserType, pageLoadingTimeSeconds $pageLoadingTimeSeconds, proxy: $proxy")
         var capabilities: DesiredCapabilities = DesiredCapabilities()
-        var webDriver: WebDriver?
+        val webDriver: WebDriver?
         when (browserType) {
             "chrome" -> capabilities = initChromeBrowser()
             "firefox" -> capabilities = initFirefoxBrowser()
@@ -54,17 +54,17 @@ class WebDriverFactory {
 
         if (proxy != null) setProxy(capabilities)
 
-        when (browserType) {
-            "chrome" -> webDriver = ChromeDriver(capabilities)
-            "firefox" -> webDriver = FirefoxDriver(capabilities)
-            "phantom" -> webDriver = PhantomJSDriver(capabilities)
-            "remote" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
-            "remote-firefox" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
-            "remote-chrome" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
-            "remote-phantom" -> webDriver = retrieveBrowserFromRemoteGrid(capabilities)
-            "jbrowser" -> webDriver = JBrowserDriver(Settings.builder().timezone(Timezone.EUROPE_AMSTERDAM).build())
+        webDriver = when (browserType) {
+            "chrome" -> ChromeDriver(capabilities)
+            "firefox" -> FirefoxDriver(capabilities)
+            "phantom" -> PhantomJSDriver(capabilities)
+            "remote" -> retrieveBrowserFromRemoteGrid(capabilities)
+            "remote-firefox" -> retrieveBrowserFromRemoteGrid(capabilities)
+            "remote-chrome" -> retrieveBrowserFromRemoteGrid(capabilities)
+            "remote-phantom" -> retrieveBrowserFromRemoteGrid(capabilities)
+            "jbrowser" -> JBrowserDriver(Settings.builder().timezone(Timezone.EUROPE_AMSTERDAM).build())
             else -> {
-                webDriver = HtmlUnitDriver()
+                HtmlUnitDriver()
             }
         }
         webDriver ?: HtmlUnitDriver()
@@ -85,8 +85,7 @@ class WebDriverFactory {
     }
 
     private fun initJBrowserDriver() : DesiredCapabilities{
-        val capabilities = DesiredCapabilities("jbrowserdriver", "1", Platform.ANY)
-        return capabilities
+        return DesiredCapabilities("jbrowserdriver", "1", Platform.ANY)
     }
 
     private fun initFirefoxBrowser(): DesiredCapabilities {

@@ -5,14 +5,14 @@ import org.openqa.selenium.By
 /**
  * Created by andrea on 30/06/16.
  */
-fun getSeleniumSelector(selectorType: String, selector: String): By {
-    when (selectorType) {
-        "css" -> return By.cssSelector(selector)
-        "xpath" -> return By.xpath(selector)
-        "id" -> return By.id(selector)
-        "classname" -> return By.className(selector)
-        "partialLink" -> return By.partialLinkText(selector)
-        "tag" -> return By.tagName(selector)
+fun getSeleniumSelector(selectorType: SelectorType?, selector: String): By {
+    return when (selectorType) {
+        SelectorType.CSS -> By.cssSelector(selector)
+        SelectorType.XPATH -> By.xpath(selector)
+        SelectorType.ID -> By.id(selector)
+        SelectorType.CLASSNAME -> By.className(selector)
+        SelectorType.PARTIALLINK -> By.partialLinkText(selector)
+        SelectorType.TAG -> By.tagName(selector)
+        else -> By.id(selector)
     }
-    return By.id(selector)
 }

@@ -13,7 +13,7 @@ import kotlin.test.assertNotNull
  * Created by andrea on 07/06/16.
  */
 @RunWith(SpringJUnit4ClassRunner::class)
-@SpringBootTest(classes = arrayOf(ApplicationScraper::class))
+@SpringBootTest(classes = [ApplicationScraper::class])
 class WebDriverFactoryTest {
 
     @Autowired
@@ -21,7 +21,7 @@ class WebDriverFactoryTest {
 
     @Test
     fun create() {
-            var webDriver = webDriverFactory.create()
+            val webDriver = webDriverFactory.create()
             assertNotNull(webDriver)
     }
 

@@ -1,6 +1,5 @@
 package scraper.browser.actions
 
-import com.google.common.collect.Multimap
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -19,28 +18,27 @@ import java.util.*
 open class FIND : BrowserAction() {
     override var from: String? = null
     override var to: String? = "results"
-    var selectorType: String = "css" //OR xpath
-    var destElType: String = "web" //jsoup
+    var selectorType: SelectorType = SelectorType.CSS//"css" //OR xpath
+    var destElType: DestType = DestType.WEB //jsoup
     var selector: String = ""
     var attribute: String? = null
     var collapseList = true
     var wait: Long = 3
 
 
-    override fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?> {
+    override fun execute() {
         var resultList: List<*> = ArrayList<Any?>()
         try {
-            var fromObj: Any?
+            val fromObj: Any? = if (from.isNullOrEmpty()) {
+                OPEN(this.webDriver).produce(destElType)
+            } else {
+                resultMap.find(from!!)
+            }
             if (selector.isNullOrEmpty()) {
                 throw MissingParamException("selector")
             }
             if (to.isNullOrEmpty()) {
                 throw MissingParamException("Where should I put results? Param \"to\" is missing!")
-            }
-            if (from.isNullOrEmpty()) {
-                fromObj = GET(this.webDriver).produce(destElType)
-            } else {
-                fromObj = resultMap.find(from!!)
             }
             if (fromObj is Collection<*> && fromObj.isNotEmpty()) {
                 fromObj.forEach { singleFrom ->
@@ -59,8 +57,6 @@ open class FIND : BrowserAction() {
         } catch(e: Exception) {
             log().error("Error during FIND action", e)
         }
-
-        return resultMap
     }
 
     private fun process(fromObj: Any?): List<*> {
@@ -73,25 +69,25 @@ open class FIND : BrowserAction() {
                 resultList = getFromJsoupElement(fromObj,selector)
             }
             is String -> {
-                var jsoupElement = Jsoup.parse(fromObj)
+                val jsoupElement = Jsoup.parse(fromObj)
                 resultList  = getFromJsoupElement(jsoupElement,selector)
             }
         }
         return resultList
     }
 
-    private fun getFromSearchContext(searchContext: SearchContext, selector: String, destElementType: String = destElType): List<*> {
+    private fun getFromSearchContext(searchContext: SearchContext, selector: String, destElementType: DestType = destElType): List<*> {
         var resultList: List<*> = ArrayList<Any?>()
-        var webElementsList: List<WebElement> = searchContext.findElements(getSeleniumSelector(selectorType, selector))
+        val webElementsList: List<WebElement> = searchContext.findElements(getSeleniumSelector(selectorType, selector))
         if (!attribute.isNullOrBlank()) {
-            var attributes: MutableList<String?> = ArrayList()
+            val attributes: MutableList<String?> = ArrayList()
             webElementsList.forEach { we -> attributes.add(we.attribute(this.attribute!!)) }
             resultList = attributes
         } else {
-            if ("web".equals(destElementType)) {
+            if (DestType.WEB == destElementType) {
                 return webElementsList
-            } else if ("jsoup".equals(destElementType)) {
-                var documentsList: MutableList<Document> = ArrayList()
+            } else if (DestType.JSOUP == destElementType) {
+                val documentsList: MutableList<Document> = ArrayList()
                 webElementsList.forEach { we -> documentsList.add(Jsoup.parse(we.getAttribute("innerHTML"))) }
                 resultList = documentsList
             }
@@ -100,26 +96,26 @@ open class FIND : BrowserAction() {
     }
 
     private fun getFromJsoupElement(element: Element, selector: String): List<*> {
-        var attributes = ArrayList<String?>()
-        var elements = element.select(selector)
+        val attributes = ArrayList<String?>()
+        val elements = element.select(selector)
         if (attribute.isNullOrBlank()) return elements
-        elements.forEach({ ir ->
+        elements.forEach { ir ->
             attributes.add(ir.attribute(attribute!!))
-        })
+        }
         return attributes
     }
 
 
 
-    fun Element.attribute(attributeKey: String): String? {
+    private fun Element.attribute(attributeKey: String): String? {
         if (attributeKey.isNullOrBlank()) return null
-        if ("text".equals(attributeKey)) {
+        if ("text" == attributeKey) {
             return this.text()
         }
         return this.attr(attributeKey)
     }
 
-    fun WebElement.attribute(attribute: String): String? {
+    private fun WebElement.attribute(attribute: String): String? {
         if ("text".equals(attribute)) {
             return this.text
         }

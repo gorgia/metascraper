@@ -3,12 +3,12 @@ version '0.1-SNAPSHOT'
 
 buildscript {
     ext {
-        kotlinVersion = '1.0.3'
-        springBootVersion = '1.4.0.BUILD-SNAPSHOT'
-        springVersion = '4.3.1.RELEASE'
-        camelVersion = '2.16.2'
-        activemqVersion = '5.13.2'
-        seleniumVersion = '2.53.1'
+        kotlinVersion = '1.2.71'
+        springBootVersion = '2.0.5.RELEASE'
+        springCore = '5.0.9.RELEASE'
+        camelVersion = '2.22.1'
+        activemqVersion = '5.15.6'
+        seleniumVersion = '3.14.0'
     }
     repositories {
         mavenCentral()
@@ -46,7 +46,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-aop:$springBootVersion"
 
-    compile "org.springframework:spring-jdbc:$springVersion"
+    compile "org.springframework:spring-jdbc:$springCore"
 
     compile "org.apache.camel:camel-spring-boot:$camelVersion"
     compile "org.apache.camel:camel-core:$camelVersion"

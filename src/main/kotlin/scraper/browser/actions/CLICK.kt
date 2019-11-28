@@ -1,6 +1,5 @@
 package scraper.browser.actions
 
-import com.google.common.collect.Multimap
 import org.openqa.selenium.WebElement
 import scraper.context.find
 import scraper.context.insert
@@ -14,8 +13,8 @@ class CLICK : BrowserAction() {
     override var to: String? = "webElement"
 
 
-    override fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?> {
-        var from = resultMap.find(from!!)
+    override fun execute() {
+        val from = resultMap.find(from!!)
         if (from is Collection<*>) {
             from.forEach { f ->
                 resultMap.insert(to!!, process(f))
@@ -23,7 +22,6 @@ class CLICK : BrowserAction() {
         } else {
             resultMap.insert(to!!, process(from))
         }
-        return resultMap
     }
 
 

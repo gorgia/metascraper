@@ -32,21 +32,21 @@ fun Any.toJson(): String {
 
 
 fun Multimap<String, *>.find(stringIndex: String): Any? {
-    var indexOfDot = stringIndex.indexOf(".")
+    val indexOfDot = stringIndex.indexOf(".")
     if (indexOfDot < 0) {
         val list = this.get(stringIndex)
         if (list.isEmpty()) return null
         if (list.size == 1) return list.first() //not sure if i want this line
         else return list
     }
-    var firstSplit = stringIndex.substring(0, indexOfDot)
-    var secondSplit = stringIndex.substring(indexOfDot + 1)
+    val firstSplit = stringIndex.substring(0, indexOfDot)
+    val secondSplit = stringIndex.substring(indexOfDot + 1)
 
     val match: Any? = this.find(firstSplit)
     if (match is Collection<*>) {
-        var resultList = LinkedList<Any?>()
+        val resultList = LinkedList<Any?>()
         match.forEach { element ->
-            var el = element as Multimap<String, *>
+            val el = element as Multimap<String, *>
             resultList.add(el.find(secondSplit))
         }
         return resultList
@@ -70,8 +70,8 @@ fun Multimap<String, Any?>.insert(stringIndex: String, value: Any?) {
     }
 
     //case B: dot found
-    var firstSplit: String = stringIndex.substring(0, indexOfDot)
-    var secondSplit: String = stringIndex.substring(indexOfDot + 1)
+    val firstSplit: String = stringIndex.substring(0, indexOfDot)
+    val secondSplit: String = stringIndex.substring(indexOfDot + 1)
     var match = this.find(firstSplit)
     //case B.1 match not found in first split ==> create map at first split
     if (match == null) {
@@ -95,8 +95,8 @@ fun <T> JSONObject.find(path: String, vararg filters: Predicate): T {
 
 fun JSONObject.insert(path: String, value: Any?, vararg filters: Predicate) {
     val lastDot: Int = path.lastIndexOf(".")
-    var key: String
-    var effectivePath: String?
+    val key: String
+    val effectivePath: String?
     var effectiveValue: Any?
     val configuration = Configuration.defaultConfiguration();
     val mappingProvider = JacksonMappingProvider();

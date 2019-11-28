@@ -23,7 +23,7 @@ import scraper.utils.ApplicationContextProvider
 @Lazy
 open class BrowserInvoker : ActionProcessor {
 
-    val mapper = ObjectMapper()
+    private val mapper = ObjectMapper()
 
     init {
         mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, true)

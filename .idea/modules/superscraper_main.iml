@@ -2,15 +2,33 @@
 <module external.linked.project.id="superscraper:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="keyron" external.system.module.type="sourceSet" external.system.module.version="0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/../../src/main/kotlin/scraper/Application.kt</file>
-        </fileset>
+      <configuration />
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/main" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.71/d9717625bb3c731561251f8dd2c67a1011d6764c/kotlin-stdlib-1.2.71.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/2.0.5.RELEASE/d5153c71f55aa39593fb6295790aad7cd81ef296/spring-boot-starter-actuator-2.0.5.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/2.0.5.RELEASE/ab04ca2e76f6a8e786001352a81a10e4b0e7fbc8/spring-boot-starter-test-2.0.5.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/2.0.5.RELEASE/6bc1e8bcc849772d48cae1e8278cd2b471361698/spring-boot-starter-aop-2.0.5.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.4.0.BUILD-SNAPSHOT/1738dbeb5d5c59195ef92b8333ce0540b59d59c2/spring-boot-starter-1.4.0.BUILD-SNAPSHOT.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.4.0.BUILD-SNAPSHOT/b9c5e4ec4438875c8f1cf90f2f634dc263f59603/spring-boot-test-autoconfigure-1.4.0.BUILD-SNAPSHOT.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.4.0.BUILD-SNAPSHOT/861156ee7b9459b784cb644afe89fba66e38669e/spring-boot-test-1.4.0.BUILD-SNAPSHOT.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator-autoconfigure/2.0.5.RELEASE/b29cda343b80e9294646070a5e0d353c3f9f01d1/spring-boot-actuator-autoconfigure-2.0.5.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.0.BUILD-SNAPSHOT/20ac371292f9eed2701ae74611c55c31043383e8/spring-boot-actuator-1.4.0.BUILD-SNAPSHOT.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.4.0.BUILD-SNAPSHOT/3a078cd3cee3801eb477f7c045896d289ad82f37/spring-boot-autoconfigure-1.4.0.BUILD-SNAPSHOT.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.0.5.RELEASE/19a4624cbd89a318d10c79f289c6c816043850fb/spring-boot-2.0.5.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.0.5.RELEASE/aa2630ce70029ecd71983d82b56fa5df8fe092a2/spring-boot-configuration-processor-2.0.5.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/5.0.9.RELEASE/2f38726ef2f5ecb72af7e915dac43177b01a8f53/spring-jdbc-5.0.9.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-spring-boot/2.22.1/2c0bf3178fdc919c695a62c7771fb463da2109f7/camel-spring-boot-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jackson/2.22.1/ee196fb93bf0e5e99544afe2bf2dda6afc0c81a1/camel-jackson-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-cxf/2.22.1/abce459c87a9973f7a55d5e41001fb93ff1192e8/camel-cxf-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-cxf-transport/2.22.1/a0f4776bd9d0e580a5d4d823dfa51262194a5ef2/camel-cxf-transport-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-http-common/2.22.1/3fce160a4456f6ca86157fcd5094e071e05b4332/camel-http-common-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-camel/5.15.6/2053ab14110eca2f8e731066af0300581f4a1a9f/activemq-camel-5.15.6.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jms/2.19.5/5eb90ef8ad799a82559fddb9a92a7f5a52cb84e2/camel-jms-2.19.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-spring/2.22.1/1e4fc0963080831081f831c5174504e0492700fd/camel-spring-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.camel/camel-core/2.22.1/7b02ce7d84cf6fd98085227411e7d867d7c7e855/camel-core-2.22.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-spring/5.13.4/ba352a5e33d7e0b22b701f738628258d7748ae14/activemq-spring-5.13.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-pool/5.13.4/a29dd12bb387eec38f64eba36459bca71e3b5d0a/activemq-pool-5.13.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-broker/5.13.4/77869af9719764a9d9c12adc9a4a0a4f23d8bd14/activemq-broker-5.13.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-openwire-legacy/5.13.4/95995fb6819e162ac4df299505800c65f670d2bf/activemq-openwire-legacy-5.13.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-client/5.15.6/4bf3a606774429af54ebc030b8780029cfc2eac4/activemq-client-5.15.6.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.3.0/f533aa6ea13e443b50e639d070986c42d03efc35/config-1.3.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.codeborne/phantomjsdriver/1.2.1/c5106c0223512a467c03b26f8a31e4027ddaa495/phantomjsdriver-1.2.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/3.14.0/5b50d4072e0e51779b6e9f3594106312061bfde/selenium-java-3.14.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/3.14.0/f35ddc0b5e0e09be644df14ada85d83e6b8b3f3c/selenium-firefox-driver-3.14.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/3.14.0/a8fa5d063821f70dab0b7170d4b814ef49ce4962/selenium-chrome-driver-3.14.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-htmlunit-driver/2.52.0/b9945a26ec2518b9d094e43e7d47b8e9146d5d39/selenium-htmlunit-driver-2.52.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.8.3/65fd012581ded67bc20945d85c32b4598c3a9cf1/jsoup-1.8.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.machinepublishers/jbrowserdriver/0.14.9/1c445accde9baec4b366a374138f4fca6ceba6df/jbrowserdriver-0.14.9.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/3.14.0/ca62365ff82c8c03861848355932ab36ddd73f57/selenium-edge-driver-3.14.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.14.0/123ae21ad13ecc888bf3e18d5c65857df32e6a9f/selenium-opera-driver-3.14.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/2.53.1/63c8e86d544b39026c0f803ec3c863a144995ad6/selenium-ie-driver-2.53.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-safari-driver/2.53.1/731e322601f56f1867e665bcb0942e154277b0cd/selenium-safari-driver-2.53.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/2.53.1/af951906201e898e1d35a9ff63b297bb633d1d03/selenium-support-2.53.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/2.53.1/5b049195915b0120259a063db049e1ffa874550e/selenium-remote-driver-2.53.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/2.53.1/b00ff9f84bfa214fda742c1287a06d447e92910e/selenium-api-2.53.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-guava/2.7.4/602810d53e07af638b085423e53a6568134c5733/jackson-datatype-guava-2.7.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9/guava-19.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.2.0/22290d17944bd239fabf5ac69005a60a7ecbbbcb/json-path-2.2.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.71/ba18ca1aa0e40eb6f1865b324af2f4cbb691c1ec/kotlin-stdlib-common-1.2.71.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jms/4.3.2.RELEASE/e80c7451725975e6cc038ec309ccb1f53a48dbc1/spring-jms-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.3.2.RELEASE/7937cb22226ac70526f2c376d2f976403d99ddae/spring-messaging-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.2.RELEASE/e52782b824e097c3b1586b497fc6be0e95020770/spring-context-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.2.RELEASE/9ed0fa8f5d9596d28f1ea9961177e2a7cb815c79/spring-test-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.2.RELEASE/caef216e995f565dd4ab165ec5918ff44487615d/spring-aop-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.2.RELEASE/dd75075485ddebb1f912102527ff91c4bfbae903/spring-tx-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.2.RELEASE/9e87f48f65a33a017f2dd027911947a28be29f93/spring-beans-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.2.RELEASE/7676acd4dde9d186b7f882edce3131dc62dcb590/spring-expression-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.2.RELEASE/fd2f3cf45d3c84f293cb7ee3ab7d24c979495552/spring-core-4.3.2.RELEASE.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-core/1.0.6/50299bc8a34c251d62311bbb1a297f3942a82e42/micrometer-core-1.0.6.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/2.5.0/fcd21db4c5f33e5dcac69bf1816415fe0647582f/assertj-core-2.5.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/e8546f5bef4e061d8dd73895b4e8f40e3fe6effe/mockito-core-1.10.19.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.3.0/d5c250eb122496866de36dc84f98e2945845ecdd/jsonassert-1.3.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.5.1/4ffdb346572a7356f7521cd3119ce5287d2e339d/xmlunit-core-2.5.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.9/db28774f477f07220eac18d5ec9c4e01f48589d7/aspectjweaver-1.8.9.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-features-logging/3.2.5/bb5dcfad22019e692cbbb7daf5212b1273846db9/cxf-rt-features-logging-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.zeroturnaround/zt-process/1.3/cb2ba7dcae545dc8d29baa85d6f6ce9bdbfbd3b8/zt-process-1.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-jms-pool/5.13.4/be1f9a48d74bda7c7fb2dd1e734296b43ca196cf/activemq-jms-pool-5.13.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.zeroturnaround/zt-exec/1.7/f0e0581e274c88f38f85c30caf404ed94f5b98f/zt-exec-1.7.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.4.0.BUILD-SNAPSHOT/c3c12a08d67eaa5ee06f97396b92a6621293bbdc/spring-boot-starter-logging-1.4.0.BUILD-SNAPSHOT.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.7/9865cf6994f9ff13fce0bf93f2054ef6c65bb462/logback-classic-1.1.7.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.21/331b564a3a42f002a0004b039c1c430da89062cd/jcl-over-slf4j-1.7.21.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.21/2f22c882ffa479d1e9ff4eb0e8e2c29f2a0871ed/jul-to-slf4j-1.7.21.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.21/b3700d97464d99bdcd42c0177d6e7951c94d75ff/log4j-over-slf4j-1.7.21.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-core/2.3.0.1/23574ca124d0a694721ce3ef13cd720095f18fdd/jaxb-core-2.3.0.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-impl/2.3.0.1/2e979dabb3e5e74a0686115075956391a14dece8/jaxb-impl-2.3.0.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.8.1/f5695ed00b367b355a652709d2dac97a02265687/jackson-module-jaxb-annotations-2.8.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.8.1/b6ef7a77ce29b017a0a2372a4df6ce6d3200627a/jackson-datatype-jsr310-2.8.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.1/c04eb2cc599cd1742889bfa7cc41878db0d152f5/jackson-databind-2.8.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-client/3.2.5/9a2fb46779c819fd8c1f0ecfeb0d76162da7a084/cxf-rt-rs-client-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-frontend-jaxrs/3.2.5/18eaaa3c72afbea2854d5ef1b60dabd8f4c41e7/cxf-rt-frontend-jaxrs-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-frontend-jaxws/3.2.5/a3226cf066154e63db4b4c003f2635596e7e68ce/cxf-rt-frontend-jaxws-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-frontend-simple/3.2.5/b220486fd438e8435b18e6cba5235fc33a29531b/cxf-rt-frontend-simple-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-ws-addr/3.2.5/14d663d52ef93041e6dd390ed56561a4e3b82ab7/cxf-rt-ws-addr-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-bindings-soap/3.2.5/f41f470d7ab0d1636c97890ad7436ce4bfd4a54c/cxf-rt-bindings-soap-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1/c872b46c601d8dc03633288b81269f9e42762cea/geronimo-jms_1.1_spec-1.1.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtbuf/hawtbuf/1.11/8f0e50ad8bea37b84b698ec40cce09e47714a63e/hawtbuf-1.11.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-j2ee-management_1.1_spec/1.0.1/5372615b0c04c1913c95c34a0414cef720ca2855/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.8.15/cb36fe3c70ead5fcd016856a7efff908402d86b8/byte-buddy-1.8.15.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/8dfb9facd0830a27b1b5f29f84593f0aeee7773b/commons-exec-1.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit/2.21/3e752dae0006ad516bf6f4138316db7b262912d0/htmlunit-2.21.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient-cache/4.5.2/bd50ea83908dbf2f387a333216e66d2f0c5079bd/httpclient-cache-4.5.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/733db77aa8d9b2d68015189df76ab06304406e50/httpclient-4.5.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.xbean/xbean-spring/3.18/63a35cfc4c0a786f86ebb9df0279b9e3b412c60/xbean-spring-3.18.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.5/e7501a1b34325abb00d17dde96150604a0658b54/httpcore-4.4.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e/okhttp-3.10.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.1/3bd22672d0999a1a4d13b542b5dd855a89e69993/okio-1.14.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.2.1/5b9e5df7a62d1279b70dc882b041d249c4f0b002/json-smart-2.2.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.1/fd13b1c033741d48291315c6370f7d475a42dccf/jackson-core-2.8.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-server/2.53.0/5fc73e1b186a9edbecd2a089d29f98248df8861/selenium-server-2.53.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/io.github.lukehutch/fast-classpath-scanner/1.9.19/484f56258754ab65df54c978277902a21887f247/fast-classpath-scanner-1.9.19.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.hdrhistogram/HdrHistogram/2.1.10/9e1ac84eed220281841b75e72fb9de5a297fbf04/HdrHistogram-2.1.10.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.latencyutils/LatencyUtils/2.0.3/769c0b82cb2421c8256300e907298a9410a2a3d3/LatencyUtils-2.0.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.json/json/20140107/d1ffca6e2482b002702c6a576166fd685e3370e3/json-20140107.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.1/4465fda9834ab27eac2a76f9a378738d15a9b4fa/jackson-annotations-2.8.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-transports-http/3.2.5/57d6a6c9f8c756c3346f65814137c3b79179dd94/cxf-rt-transports-http-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-bindings-xml/3.2.5/2514ebd6459f6e7f0f06dd5cafd191ba43608864/cxf-rt-bindings-xml-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-databinding-jaxb/3.2.5/5388a71cff5fc390b5c7393de8ece33bb54d85c/cxf-rt-databinding-jaxb-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-wsdl/3.2.5/f060d92ff09ecfe0ecfaf84614a2c5f9f60e98e4/cxf-rt-wsdl-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-ws-policy/3.2.5/64f01344df7191be8eee193589c0cb233fe52da7/cxf-rt-ws-policy-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-core/3.2.5/97ef733f24a22275974b78f557a70334508f9404/cxf-core-3.2.5.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.1/426a0862406536e690c7caa8bb6ed32191986fac/javax.ws.rs-api-2.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3/67747496d8b5c1f300ed3cde4ba69d6f453ba984/javax.annotation-api-1.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/xml-resolver/xml-resolver/1.2/3d0f97750b3a03e0971831566067754ba4bfd68c/xml-resolver-1.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/1.1/a527213f2fea112a04c9bdf0ec0264e34104cd08/accessors-smart-1.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.2/4ce3ecdc7115bcbf9d4ff4e6ec638e60760819df/asm-5.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-jta_1.0.1B_spec/1.0.1/c9e67d21082a497f20e4ce87be1379faceb9c087/geronimo-jta_1.0.1B_spec-1.0.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.4.2/e5f4f28f19d57716fbc3989d7a357ebf1e454fea/commons-pool2-2.4.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/4.1.0/23457ad1cf75c2c16763330de5565a0e67b4bc0a/jna-platform-4.1.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.2.2/5012450aee579c3118ff09461d5ce210e0cdc2a9/jna-4.2.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/cglib/cglib-nodep/2.1_3/58d3be5953547c0019e5704d6ed4ffda3b0c7c66/cglib-nodep-2.1_3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/io.netty/netty/3.5.7.Final/811465e6dfc89d7c78d21de6a9747b6046cb5403/netty-3.5.7.Final.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.2/d55d3f02a56ec4c25695fe67e1334ff8c2ecea23/xalan-2.7.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.4/5fe28b9518e58819180a43a850fbc0dd24b7c050/commons-lang3-3.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit-core-js/2.17/4316d68f449d42f69faf4ee255aa31b03e4f7dd5/htmlunit-core-js-2.17.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/neko-htmlunit/2.21/a714aa20a2a6e04ada63805e1a16ad0540aa65e/neko-htmlunit-2.21.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/net.sourceforge.cssparser/cssparser/0.9.18/61c015378d27b5e245a5deb7a324c7e716b4706a/cssparser-0.9.18.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-client/9.3.11.v20160721/7d2b5ca45f2dc608b49a8cecc0673721197e2d5f/websocket-client-9.3.11.v20160721.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.sun.jna/jna/3.0.9/9dd557b9a44d05a3810104ed1c835a42b925dc4a/jna-3.0.9.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.6/ce1edb914c94ebc388f086c6827e8bdeec71ac2/commons-lang-2.6.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/com.fasterxml.woodstox/woodstox-core/5.0.3/10aa199207fda142eff01cd61c69244877d71770/woodstox-core-5.0.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.ws.xmlschema/xmlschema-core/2.2.3/920a9a3132f925554ae8432d9473c8806734a8ec/xmlschema-core-2.2.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/wsdl4j/wsdl4j/1.6.3/6d106a6845a3d3477a1560008479312888e94f2f/wsdl4j-1.6.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.2/24247f3bb052ee068971393bdb83e04512bb1c3c/serializer-2.7.2.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/9bb329db1cfc4e22462c9d6b43a8432f5850e92c/xercesImpl-2.11.0.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.w3c.css/sac/1.3/cdb2dcb4e22b83d6b32b93095f644c3462739e82/sac-1.3.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.3.11.v20160721/c5a8367ba0663d7f923315f034a36a91acc9b9a0/websocket-common-9.3.11.v20160721.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.3.11.v20160721/db5f4f481159894a4b670072a34917b5414d0c98/jetty-io-9.3.11.v20160721.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.3.11.v20160721/1812ffd5a04698051180d582c146ca807760c808/jetty-util-9.3.11.v20160721.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.7/7873092d39ef741575ca91378a6a21c388363ac8/logback-core-1.1.7.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.codehaus.woodstox/stax2-api/3.1.4/ac19014b1e6a7c08aad07fe114af792676b685b7/stax2-api-3.1.4.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.apache.neethi/neethi/3.1.1/3a942a7921e66bb0081b16cf8f8a68e456b91de1/neethi-3.1.1.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar:/home/andrea/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-api/9.3.11.v20160721/1b85df210c5c077fad0973b9dd10dbce8a821623/websocket-api-9.3.11.v20160721.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="superscraper" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.2" />
+          <option name="apiVersion" value="1.2" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+        </compilerArguments>
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/../../build/classes/main" />
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../out/production/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
@@ -19,150 +37,159 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.0.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-configuration-processor:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-aop:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-jdbc:4.3.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-spring-boot:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-core:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-jackson:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-cxf:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-camel:5.13.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-client:5.13.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.71" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.0.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:1.4.0.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test:1.4.0.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-actuator:1.4.0.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.4.0.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-configuration-processor:2.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jdbc:5.0.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-spring-boot:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-jackson:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-cxf:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-cxf-transport:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-http-common:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-camel:5.15.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-jms:2.19.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-spring:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.camel:camel-core:2.22.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-spring:5.13.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-pool:5.13.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-broker:5.13.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-openwire-legacy:5.13.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-client:5.15.6" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe:config:1.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:2.53.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:2.53.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:2.53.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0" level="project" />
     <orderEntry type="library" name="Gradle: com.codeborne:phantomjsdriver:1.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.14.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:3.14.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.14.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jsoup:jsoup:1.8.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.machinepublishers:jbrowserdriver:0.14.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.14.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-opera-driver:3.14.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:2.53.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-safari-driver:2.53.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:2.53.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:2.53.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:2.53.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.6.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-guava:2.7.4" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Gradle: com.jayway.jsonpath:json-path:2.2.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-guava:2.7.4" level="project" />
-    <orderEntry type="library" name="Gradle: com.machinepublishers:jbrowserdriver:0.14.9" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-runtime:1.0.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-core:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-actuator:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.json:json:20140107" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:1.4.0.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.71" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jms:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-messaging:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-test:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-tx:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: io.micrometer:micrometer-core:1.0.6" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
-    <orderEntry type="library" name="Gradle: org.assertj:assertj-core:2.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.assertj:assertj-core:2.5.0" level="project" />
     <orderEntry type="library" name="Gradle: org.mockito:mockito-core:1.10.19" level="project" />
-    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-library:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Gradle: org.skyscreamer:jsonassert:1.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-test:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.3.2.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.xmlunit:xmlunit-core:2.5.1" level="project" />
     <orderEntry type="library" name="Gradle: org.aspectj:aspectjweaver:1.8.9" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-tx:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-spring:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
-    <orderEntry type="library" name="Gradle: com.sun.xml.bind:jaxb-core:2.2.11" level="project" />
-    <orderEntry type="library" name="Gradle: com.sun.xml.bind:jaxb-impl:2.2.11" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.8.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-cxf-transport:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-frontend-jaxrs:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-frontend-jaxws:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-rs-security-oauth:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-bindings-soap:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.camel:camel-jms:2.16.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-spring:5.13.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-pool:5.13.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.fusesource.hawtbuf:hawtbuf:1.11" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:2.53.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:htmlunit-driver:2.21" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:2.53.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-safari-driver:2.53.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:2.53.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-leg-rc:2.53.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:2.53.0" level="project" />
-    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-exec:1.3" level="project" />
-    <orderEntry type="library" name="Gradle: net.sourceforge.htmlunit:htmlunit:2.21" level="project" />
-    <orderEntry type="library" name="Gradle: commons-collections:commons-collections:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
-    <orderEntry type="library" name="Gradle: net.minidev:json-smart:2.2.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient-cache:4.5.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:2.53.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-server:2.53.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-features-logging:3.2.5" level="project" />
     <orderEntry type="library" name="Gradle: org.zeroturnaround:zt-process:1.3" level="project" />
-    <orderEntry type="library" name="Gradle: io.github.lukehutch:fast-classpath-scanner:1.9.19" level="project" />
-    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.4.0.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.17" level="project" />
-    <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-core:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1" level="project" />
-    <orderEntry type="library" name="Gradle: javax.annotation:javax.annotation-api:1.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-transports-http:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: xml-resolver:xml-resolver:1.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.ow2.asm:asm:5.0.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-bindings-xml:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-frontend-simple:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-ws-addr:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-rs-client:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: net.oauth.core:oauth-provider:20100527" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-wsdl:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-databinding-jaxb:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-jms:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.xbean:xbean-spring:3.18" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-broker:5.13.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec:1.0.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-pool2:2.4.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-jms-pool:5.13.3" level="project" />
-    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:4.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna-platform:4.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty:3.5.7.Final" level="project" />
-    <orderEntry type="library" name="Gradle: cglib:cglib-nodep:2.1_3" level="project" />
-    <orderEntry type="library" name="Gradle: xalan:xalan:2.7.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpmime:4.5.2" level="project" />
-    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
-    <orderEntry type="library" name="Gradle: net.sourceforge.htmlunit:htmlunit-core-js:2.17" level="project" />
-    <orderEntry type="library" name="Gradle: net.sourceforge.htmlunit:neko-htmlunit:2.21" level="project" />
-    <orderEntry type="library" name="Gradle: net.sourceforge.cssparser:cssparser:0.9.18" level="project" />
-    <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-client:9.3.10.v20160621" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.5" level="project" />
-    <orderEntry type="library" name="Gradle: net.minidev:accessors-smart:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-jms-pool:5.13.4" level="project" />
     <orderEntry type="library" name="Gradle: org.zeroturnaround:zt-exec:1.7" level="project" />
-    <orderEntry type="library" name="Gradle: com.sun.jna:jna:3.0.9" level="project" />
-    <orderEntry type="library" name="Gradle: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.4.0.BUILD-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.1.7" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:jul-to-slf4j:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.21" level="project" />
-    <orderEntry type="library" name="Gradle: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.ws.xmlschema:xmlschema-core:2.2.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-ws-policy:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: net.oauth.core:oauth:20100527" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
+    <orderEntry type="library" name="Gradle: com.sun.xml.bind:jaxb-core:2.3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.sun.xml.bind:jaxb-impl:2.3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-rs-client:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-frontend-jaxrs:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-frontend-jaxws:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-frontend-simple:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-ws-addr:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-bindings-soap:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.fusesource.hawtbuf:hawtbuf:1.11" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.8.15" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-exec:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.sourceforge.htmlunit:htmlunit:2.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient-cache:4.5.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpmime:4.5.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.xbean:xbean-spring:3.18" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.10.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.14.1" level="project" />
+    <orderEntry type="library" name="Gradle: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: net.minidev:json-smart:2.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-server:2.53.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.github.lukehutch:fast-classpath-scanner:1.9.19" level="project" />
+    <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.17" level="project" />
+    <orderEntry type="library" name="Gradle: org.hdrhistogram:HdrHistogram:2.1.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.latencyutils:LatencyUtils:2.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.json:json:20140107" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-transports-http:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-bindings-xml:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-databinding-jaxb:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-wsdl:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-rt-ws-policy:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.cxf:cxf-core:3.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.1" level="project" />
+    <orderEntry type="library" name="Gradle: javax.annotation:javax.annotation-api:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: xml-resolver:xml-resolver:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: net.minidev:accessors-smart:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm:5.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-pool2:2.4.2" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna-platform:4.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:4.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: cglib:cglib-nodep:2.1_3" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty:3.5.7.Final" level="project" />
+    <orderEntry type="library" name="Gradle: xalan:xalan:2.7.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.4" level="project" />
+    <orderEntry type="library" name="Gradle: net.sourceforge.htmlunit:htmlunit-core-js:2.17" level="project" />
+    <orderEntry type="library" name="Gradle: net.sourceforge.htmlunit:neko-htmlunit:2.21" level="project" />
+    <orderEntry type="library" name="Gradle: net.sourceforge.cssparser:cssparser:0.9.18" level="project" />
+    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-client:9.3.11.v20160721" level="project" />
+    <orderEntry type="library" name="Gradle: com.sun.jna:jna:3.0.9" level="project" />
+    <orderEntry type="library" name="Gradle: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.woodstox:woodstox-core:5.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.ws.xmlschema:xmlschema-core:2.2.3" level="project" />
     <orderEntry type="library" name="Gradle: wsdl4j:wsdl4j:1.6.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-messaging:4.3.2.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-openwire-legacy:5.13.3" level="project" />
     <orderEntry type="library" name="Gradle: xalan:serializer:2.7.2" level="project" />
     <orderEntry type="library" name="Gradle: xerces:xercesImpl:2.11.0" level="project" />
     <orderEntry type="library" name="Gradle: org.w3c.css:sac:1.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-util:9.3.10.v20160621" level="project" />
-    <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-io:9.3.10.v20160621" level="project" />
-    <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-common:9.3.10.v20160621" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-common:9.3.11.v20160721" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-io:9.3.11.v20160721" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-util:9.3.11.v20160721" level="project" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.1.7" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.neethi:neethi:3.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.neethi:neethi:3.1.1" level="project" />
     <orderEntry type="library" name="Gradle: xml-apis:xml-apis:1.4.01" level="project" />
-    <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-api:9.3.10.v20160621" level="project" />
+    <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-api:9.3.11.v20160721" level="project" />
   </component>
 </module>

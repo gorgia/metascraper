@@ -11,12 +11,12 @@ import scraper.context.insert
 open class SCROLL : BrowserAction() {
     override var from: String? = ""
     override var to: String? = "scrolledDocument"
-    var type = "css" // or jsoup
+    var destType: DestType = DestType.JSOUP // or jsoup
     var heartbit = 1
 
     override fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?> {
         this.webDriver.infiniteScroll(heartbit)
-        resultMap.insert(to!!, GET(this.webDriver).produce(type))
+        resultMap.insert(to!!, OPEN(this.webDriver).produce(destType))
         return resultMap
     }
 }

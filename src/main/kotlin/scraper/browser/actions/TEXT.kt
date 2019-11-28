@@ -18,7 +18,7 @@ class TEXT : BrowserAction() {
 
 
     override fun execute(resultMap: Multimap<String, Any?>): Multimap<String, Any?> {
-        var from = resultMap.find(from!!)
+        val from = resultMap.find(from!!)
         if (from is Collection<*>) {
             from.forEach { f ->
                 resultMap.insert(to!!, process(f))
@@ -34,7 +34,7 @@ class TEXT : BrowserAction() {
         if (from !is WebElement) {
             throw(MissingParamException("Wrong type of from it must be of type WebElement"))
         }
-        var key: Keys? = Keys.getKeyFromUnicode(text[0]) //return null if text is not a special character
+        val key: Keys? = Keys.getKeyFromUnicode(text[0]) //return null if text is not a special character
         if (key != null) {
             from.sendKeys(key)
         } else {

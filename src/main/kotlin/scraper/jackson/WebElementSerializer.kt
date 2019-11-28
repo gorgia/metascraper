@@ -15,7 +15,7 @@ import scraper.utils.log
 class WebElementSerializer : JsonSerializer<WebElement>() {
     override fun serialize(value: WebElement?, gen: JsonGenerator?, serializers: SerializerProvider?) {
         val jsonNodeFactory: JsonNodeFactory = JsonNodeFactory.instance
-        var jsonNode: JsonNode
+        val jsonNode: JsonNode
         try {
             jsonNode = jsonNodeFactory.textNode(value?.getAttribute("innerHTML"))
             gen?.writeObject(jsonNode)
@@ -25,7 +25,6 @@ class WebElementSerializer : JsonSerializer<WebElement>() {
             if(value is RemoteWebElement)
                 gen?.writeObject("${value.id} no longer available. Writing its content is impossible.")
         }
-
     }
 }
 

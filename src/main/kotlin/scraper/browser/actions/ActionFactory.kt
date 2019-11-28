@@ -20,7 +20,7 @@ open class ActionFactory {
 
     open fun createActionList(jsonString: String): LinkedList<Action> {
         val jsonObject: JSONObject = JSONObject(jsonString)
-        var actionsObject: JSONArray? = jsonObject.getJSONArray("actions")
+        val actionsObject: JSONArray? = jsonObject.getJSONArray("actions")
         return objectMapper.readValue(actionsObject.toString(), TypeFactory.defaultInstance().constructCollectionLikeType(LinkedList::class.java, Action::class.java))
     }
 

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-features-logging:3.2.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-features-logging/3.2.5/bb5dcfad22019e692cbbb7daf5212b1273846db9/cxf-rt-features-logging-3.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-features-logging/3.2.5/f4cae3c2657b5e419b42dd4fdbfe77883c9ccef5/cxf-rt-features-logging-3.2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
